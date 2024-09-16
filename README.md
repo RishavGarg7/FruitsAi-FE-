@@ -14,7 +14,7 @@ This is the frontend part of the **Fruit.ai** health manager product built using
 
 ## Demo
 
-Check out the live demo of the frontend at: [**Fruit.ai on Vercel**]("https://fruits-ai-fe.vercel.app/")
+Check out the live demo of the frontend at: [**Fruit.ai on Vercel**](https://fruits-ai-fe.vercel.app/)
 
 ## Features
 
