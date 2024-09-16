@@ -46,6 +46,7 @@ export default function Login() {
               id="email"
               value={email}
               onChange={handleEmailChange}
+              autoComplete="off"
               className="login-input-email"
             />
           </div>
