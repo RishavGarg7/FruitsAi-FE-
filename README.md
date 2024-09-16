@@ -1,6 +1,75 @@
-# Getting Started with Create React App
+# Fruit.ai - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend part of the **Fruit.ai** health manager product built using React. The application allows users to log in, view various services (Chatbot, Translator, FAQ, About), and perform CRUD operations for FAQs using an Express backend.
+
+## Table of Contents
+
+- [Demo](#demo)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [API Integration](#api-integration)
+
+## Demo
+
+Check out the live demo of the frontend at: [**Fruit.ai on Vercel**]("https://fruits-ai-fe.vercel.app/")
+
+## Features
+
+- **Login Page:** A basic login form with hardcoded credentials for demonstration.
+- **Home Page:** Displays cards for each service (Chatbot, Translator, FAQ, About) and navigates to respective pages.
+- **Chatbot Page:** Shows a list of fruits as cards with detailed individual views.
+- **Translator Page:** Provides a dummy translation feature.
+- **FAQ Page:** Allows users to add, update, delete, and view FAQs using CRUD operations with the backend API.
+- **About Page:** Displays static information about the application.
+- **Mobile-Friendly:** Responsive design using standard CSS.
+
+## Tech Stack
+
+- **Frontend:** React, JavaScript, CSS
+- **Routing:** React Router (`react-router-dom`)
+- **API Calls:** Axios
+- **State Management:** React Hooks (`useState`, `useEffect`)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later) and npm (v6 or later) installed on your system.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fruit-ai-frontend.git
+   cd fruit-ai-frontend
+   ```
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+   - The application will run on `http://localhost:3000`.
+
+## Project Structure
+
+- **public/**: Contains public assets such as `index.html`, `favicon.ico`, etc.
+- **src/**: Main source code directory
+  - **api/**: Handles API interaction logic (e.g., `api.js`).
+  - **assets/**: Stores static assets like images, fonts, and icons.
+  - **components/**: Contains reusable components like `LoginForm`, `FruitCard`, etc.
+  - **pages/**: Includes individual pages such as `LoginPage`, `HomePage`, `ChatbotPage`.
+  - **styles/**: Contains CSS styles and stylesheets.
+  - **index.js**: Entry point of the React application.
+- **.env**: Environment variables file.
+- **.gitignore**: Lists files and directories to ignore in Git.
+- **package.json**: Contains project metadata and dependencies.
+- **README.md**: Documentation file for the project.
 
 ## Available Scripts
 
@@ -8,63 +77,17 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder. It bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run lint`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Lints the codebase using ESLint to maintain code quality.
 
-### `npm run eject`
+## API Integration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The frontend interacts with the backend API using Axios.
+- API base URL is defined in the `.env` file (`REACT_APP_API_URL`).
