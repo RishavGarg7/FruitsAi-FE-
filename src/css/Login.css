@@ -139,9 +139,14 @@
   margin-bottom: 15px;
 }
 
-.login-social-media img {
+.login-social-media img,
+.login-guest-icon {
   margin: 0 10px;
   width: 35px;
   border-radius: 50%;
   cursor: pointer;
+}
+.login-guest-icon {
+  font-size: 35px;
+  color: rgb(162, 162, 162);
 }

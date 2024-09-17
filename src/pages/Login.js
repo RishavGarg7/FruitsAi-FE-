@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../css/Login.css";
 import { Google, Facebook, Linkedin, Instagram } from "../assets";
 import LoginForm from "../components/LoginForm";
 import RegisterForm from "../components/RegisterForm";
+import { FaUserCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function Login() {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
+  const navigate = useNavigate();
+  const handleGuest = () => {
+    navigate("/home");
+    toast.success("Logged in as Guest User!");
+  };
+  useEffect(() => {
+    toast.info("Click on Guest Icon to Log in as Guest User");
+  }, []);
   return (
     <div className="login-outer-container">
       <div className="login-container">
@@ -40,6 +51,12 @@ export default function Login() {
           <img src={Facebook} alt="Facebook" loading="lazy" />
           <img src={Linkedin} alt="LinkedIn" loading="lazy" />
           <img src={Instagram} alt="Instagram" loading="lazy" />
+          {/* <img src={Instagram} alt="Instagram" loading="lazy" /> */}
+          <FaUserCircle
+            className="login-guest-icon"
+            title="Guest User"
+            onClick={handleGuest}
+          />
         </div>
       </div>
     </div>
