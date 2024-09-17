@@ -5,6 +5,7 @@ body {
   background: linear-gradient(to right, #05d6d9, #f907fc);
   user-select: none;
   scrollbar-width: none;
+  overflow-x: hidden;
 }
 
 * {
