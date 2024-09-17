@@ -14,7 +14,7 @@ export default function FaqFrom({ update, setUpdate }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (title === "" || desc === "" || name === "") {
-      toast.error("Please fill all fields !");
+      toast.warn("Please fill all fields !");
       return;
     }
     const res = await addFaq(name, title, desc);

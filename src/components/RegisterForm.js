@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { register } from "../api/LoginApi.js";
 
 export default function RegisterForm() {
   const [email, setEmail] = useState("");
@@ -9,10 +10,10 @@ export default function RegisterForm() {
   const [agree, setAgree] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (email === "" || password === "" || cnfPsw === "") {
-      toast.error("Please provide all details !");
+      toast.warn("Please provide all details !");
       return;
     }
     if (password !== cnfPsw) {
@@ -20,12 +21,16 @@ export default function RegisterForm() {
       return;
     }
     if (!agree) {
-      toast.error("Please agree to T&C !");
+      toast.warn("Please agree to T&C !");
       return;
     }
-    navigate("/home");
-    console.log("Email:", email);
-    console.log("Password:", password);
+    const res = await register(email, password);
+    if (res) {
+      toast.success("Registered successfully!");
+      navigate("/home");
+      console.log("Email:", email);
+      console.log("Password:", password);
+    }
   };
   return (
     <form className="login-form" onSubmit={handleSubmit}>

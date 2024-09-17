@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const API_URL = "https://fruitsai-be.onrender.com/api-v1";
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const addFaq = async (name, title, desc) => {
   try {

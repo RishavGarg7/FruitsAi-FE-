@@ -1,21 +1,26 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { login } from "../api/LoginApi.js";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (email === "" || password === "") {
-      toast.error("Please provide all details !");
+      toast.warn("Please provide all details !");
       return;
     }
-    navigate("/home");
-    console.log("Email:", email);
-    console.log("Password:", password);
+    const res = await login(email, password);
+    if (res) {
+      toast.success("Logged in successfully!");
+      navigate("/home");
+      console.log("Email:", email);
+      console.log("Password:", password);
+    }
   };
   return (
     <form className="login-form" onSubmit={handleSubmit}>
