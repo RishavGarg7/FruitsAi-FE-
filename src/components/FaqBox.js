@@ -1,7 +1,7 @@
 import React from "react";
 import { MdEdit, MdDelete } from "react-icons/md";
 import { AboutImg } from "../assets";
-import { deleteFaq, editFaq } from "../api/FaqApi.js";
+import { deleteFaq } from "../api/FaqApi.js";
 import { toast } from "react-toastify";
 
 export default function FaqBox({ data, update, setUpdate }) {
