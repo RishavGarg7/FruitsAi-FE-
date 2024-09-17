@@ -10,7 +10,6 @@ export default function Chat() {
   const [chatArr, setChararr] = useState(["Try with a fruit name like Apple"]);
   useEffect(() => {
     const res = JSON.parse(localStorage.getItem("chats"));
-    console.log(res);
     if (res) {
       setChararr(res);
     }

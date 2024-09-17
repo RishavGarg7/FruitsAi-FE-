@@ -92,7 +92,7 @@ const chatData = [
 ];
 
 export const getreply = (text) => {
-  const data = chatData.find((ele) => ele.name === text);
+  const data = chatData.find((ele) => ele.name === text.toLowerCase());
   if (!data) {
     return "Try searching other fruit";
   } else {

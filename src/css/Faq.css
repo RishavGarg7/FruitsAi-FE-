@@ -69,6 +69,7 @@
 }
 .faq-textarea {
   min-height: 100px;
+  padding: 15px 15px;
   overflow: hidden;
 }
 .faq-add-btn {
@@ -166,9 +167,6 @@
 @media screen and (max-width: 880px) {
   .faq-input-upper-part {
     flex-direction: column;
-  }
-  .faq-input-box {
-    /* width: 90%; */
   }
   .faq-show-inner-box {
     width: 300px;
