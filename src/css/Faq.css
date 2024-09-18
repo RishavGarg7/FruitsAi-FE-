@@ -41,13 +41,8 @@
 .faq-input-right-part {
   width: 100%;
   display: flex;
-  justify-content: center;
-}
-
-.faq-input-lower-part {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .faq-input-field {
@@ -91,7 +86,7 @@
   border: none;
   font-size: 15px;
   font-weight: 600;
-  padding: 10px 80px;
+  padding: 10px 100px;
   border-radius: 20px;
   text-decoration: none;
   cursor: pointer;
@@ -139,7 +134,7 @@
 
 .faq-box-img {
   width: 100%;
-  height: 50%;
+  height: 60px;
   object-fit: cover;
   border-radius: 5px;
 }

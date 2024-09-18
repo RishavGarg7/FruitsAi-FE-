@@ -3,12 +3,13 @@ import { toast } from "react-toastify";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-export const addFaq = async (name, title, desc) => {
+export const addFaq = async (name, title, desc, url) => {
   try {
     const res = await axios.post(`${API_URL}/faq/add`, {
       name,
       title,
       desc,
+      url,
     });
     return res.data;
   } catch (err) {

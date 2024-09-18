@@ -14,7 +14,11 @@ export default function FaqBox({ data, update, setUpdate }) {
   return (
     <div className="faq-show-inner-box">
       <div className="faq-show-left-box">
-        <img src={AboutImg} className="faq-box-img" alt="BoxImage" />
+        <img
+          src={data.url || AboutImg}
+          className="faq-box-img"
+          alt="BoxImage"
+        />
         <h3>{data.name}</h3>
         <div className="faq-show-in-left">
           <MdEdit className="faq-icon-edit faq-icon" onClick={handleEdit} />
